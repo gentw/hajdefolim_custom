@@ -1,0 +1,28 @@
+@mixin blog_styles_excerpt--lg() {
+	/* Blog layout: Excerpt */
+	.post_layout_excerpt .post_header .post_price {
+		@include font(2em, 1.5em);
+	}
+}
+
+@mixin blog_styles_excerpt--md() {
+	/* Blog layout: Excerpt */
+	.post_layout_excerpt .post_header .post_price {
+		@include font(1.75em, 1.5em);
+	}
+	.post_layout_excerpt .post_content:after {
+		margin-top: 2rem;
+	}
+	.post_layout_excerpt + .post_layout_excerpt {
+		margin-top: 3.6rem;
+	}
+}
+
+@mixin blog_styles_excerpt--sm() {
+  .post_layout_excerpt .post_content:after {
+    margin-top: 1rem;
+  }
+  .post_layout_excerpt + .post_layout_excerpt {
+    margin-top: 2.4rem;
+  }
+}

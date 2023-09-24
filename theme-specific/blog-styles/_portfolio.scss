@@ -1,0 +1,47 @@
+/* Blog layout: Portfolio
+------------------------- */
+.post_layout_portfolio .post_title {
+	margin: 1em 0 0.4em;
+}
+.post_layout_portfolio .post_featured {
+	margin-bottom:0;
+}
+.post_layout_portfolio .post_featured img {
+	width: 100%;
+}
+
+
+
+//  This way use masonry.js script to build masonry layout and work properly in any browsers!
+//-----------------------------------------------------------------------------------------------------
+.portfolio_wrap {
+	position:relative;
+	margin-right:-$grid_gap;
+}
+.post_layout_portfolio {
+	position:relative;
+    display: inline-block;
+	vertical-align:top;
+	padding:0 $grid_gap $grid_gap 0;
+	margin-bottom:0;
+    width: 50%;
+	border-width: 0;
+	@include border-box;
+}
+.portfolio_wrap.portfolio_3 .post_layout_portfolio {
+    width: 33.3333%;
+}
+.portfolio_wrap.portfolio_4 .post_layout_portfolio {
+    width: 25%;
+}
+.post_layout_portfolio .label_sticky {
+	top: -12px;
+	left: -12px;
+	right:auto;
+	@include rotate(135deg);
+}
+
+// Portfolio in the slider
+.post_layout_portfolio.slider-slide {
+	padding: 0;
+}

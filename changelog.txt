@@ -1,0 +1,165 @@
+﻿Version v.2.0
+    Added:
+        - Elementor  Homepage Food and Black
+    Remove:
+        - CoBlocks plugin
+        - CoBlocks pages
+
+Version v.1.9.7
+    Fixed:
+    - Theme styles
+
+Version v.1.9.6
+    Added:
+        - Elementor Compatibility Homepage 1 Elementor Demo
+    Fixed:
+        - Update plugins to the latest versions
+
+Version v.1.9.5
+    Added:
+        - Compatibility with WordPress 5.4.1
+
+Version v.1.9.4
+	Added:
+		- Option: Show Header Breadcrumbs
+		- Option: Show posts navigation
+		- Compatibility with TRX Updater
+	Changed:
+		- Category to show option (multiple selection available)
+
+Version v.1.9.3
+    Added:
+    	- New Home (Coronavirus)
+    Fixed:
+        - Plugin ThemeREX Addons update (Version: 1.9.2.1)
+        - Improve CSS styles (for meta items)
+
+Version v.1.9.2
+    Added:
+    	- RTL Styles
+        - Compatibility with WordPress 5.3.2
+
+Version v.1.9.1
+    Added:
+    	- Compatibility with elegro Crypto Payment plugin
+
+Version v.1.9.0
+    Added:
+        - Pages with CoBlocks items
+        - Styles for CoBlocks item
+        - New plugin Yellow Pencil
+        - Header menu location with "Mega Menu" effect
+
+Version v.1.8.2
+	Added:
+		- Compatibility with PHP 7.3
+		- CSS class "simple-thumbs". Apply it in shortcode "trx_slider_controls". Usage example:
+			[trx_slider_controls pagination_style="thumbs" class="simple-thumbs"  hide_next="1" hide_prev="1"]
+
+	Fixed:
+		- Side header type
+		- Plugin ThemeREX Addons update (Version: 1.7.7.2)
+
+Version v.1.8.1
+	Added:
+		- Grid Masonry Related Posts Widget
+		- Side header layout
+		- Featured header layout
+	Fixed:
+		- Plugin ThemeREX Addons update (Version: 1.7.7.1)
+
+Version v.1.8.0
+	Added:
+		 - "Train" blog style
+		 - Style "Extra" for "Recent News" widget
+		 - Emotions "Resent Post" Widget 
+	Fixed:
+		- Plugin ThemeREX Addons update (Version: 1.7.7)
+
+Version v.1.7.1
+	 Fixed:
+		- Loading Masonry scripts on Home Page
+		- Mobile menu fullscreen
+		- Improve optimization for Gutenberg
+
+Version v.1.7.0
+	 Added:
+		- "Light" blog style
+		- Style "Announce" for "Recent News" widget
+	 Fixed:
+		- Plugin ThemeREX Addons update (Version: 1.7.5)
+
+Version v.1.6.0
+	 Added:
+		 - "Separate" header style
+		 - "Split" blog style
+		 - "Center" footer style
+		 - Improve CSS styles
+
+Version v.1.5.0
+	 Added:
+		 - "Recent News" widget
+		 - Update ThemeREX Addons Plugin (Version: 1.7.4)
+		 - New Footer Type -> "Modern"
+		 - Improve CSS styles
+
+Version v.1.4.1
+	Fixed:
+		- Plugin ThemeREX Addons update (Version: 1.7.3)
+			-> Slider Meta
+		- Woocommerce Import demo data
+
+Version 1.4.0
+	Added:
+		- WooCommerce plugin
+		- "E-commerce" header style with Cart label
+		- "Banner" and "WooCommerce Search" sidebar widgets
+		
+	Fixed:
+		- Update ThemeREX Addons plugin (Version: 1.7.2)
+		- Update documentation
+
+Version 1.3.0
+	Added:
+		- "Show related posts" option and corresponding section on single post's pages (Appearance > Customize > Blog > Single Posts)
+		- "Show logo in the footer" option (Appearance > Customize > Footer)
+		- "Center" header style
+		- "Simple" footer style 
+		- "Footer Menu" location (Appearance > Menus)
+	Fixed:
+		- Show/Close Comments translation
+		- Update ThemeREX Addons plugin (Version: 1.7.1)
+		- Remove JS error while activating Elementor plugin (..\plugins\trx_addons\components\cpt\layouts\layouts.php)
+		- "Add custom widgets area" option (Appearance > Widgets)
+		- Improve CSS styles
+		- Update documentation
+
+Version 1.2.0
+	Added:
+		- "Sidebar position" option for single post's pages (Appearance > Customize > Blog > Single posts)
+		- "Header widgets (below)" widget area (Appearance > Customize > Header)
+		- "Simple" blog style (displayed on Home Creative)
+		- Logo options duplication for pages (page > Theme Options section)
+	Fixed:
+		- Update ThemeREX Addons plugin (Version: 1.7) 
+		- Compatibility with older PHP versions
+		- Date displaying in widgets ( function gutentype_get_date(){ ... } )
+		- Improve CSS styles
+		- Update documentation
+
+Version 1.1.0
+	Added:
+		- "Plain" blog style (displayed on Home Classic)
+		- Menu animation
+	Fixed:
+		- Theme Option dependency (in Main Option)
+		- Demo Content (rename Home-pages)
+		- Data filtration and verification ( theme-specific\theme-tags.php )
+		- Improve CSS styles (Pagination)
+		- Update documentation
+
+Version 1.0.1
+	Fixed: 
+		- Refactor code
+
+Release – v.1.0 (1.0.49.3)

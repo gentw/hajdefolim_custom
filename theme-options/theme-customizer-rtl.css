@@ -1,0 +1,37 @@
+/* Theme Customizer styles */
+
+
+#customize-header-actions .customize-action-reset {
+	float: left;
+	margin-right: 6px;
+	margin-left: 0;
+}
+
+#customize-header-actions .customize-action-refresh {
+	right: 60px;
+	left: auto;
+}
+
+.customize-control-info > div {
+	border-right: 4px solid #1e8cbe;
+	border-left: 0px solid #1e8cbe;
+}
+
+/* Widgets parameters
+ *
+ * Uncomment first row in each selector if you want display ThemeREX Widgets as SOW - fixed to the right side of panel
+ * If you remove '[id^="customize-control-widget_trx_addons_"]' part from first line - standard WP Widgets will be moved also
+ *
+ */
+
+.customize-control-widget_form.wide-widget-control .widget-inside {
+	left: auto;
+	right: 18%;
+}
+
+@media (max-width: 1667px) {
+	.customize-control-widget_form.wide-widget-control .widget-inside {
+		left: auto;
+		right: 300px;
+	}
+}

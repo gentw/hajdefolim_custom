@@ -1,0 +1,83 @@
+/* ATTENTION! This file was generated automatically! Don't change it!!!
+----------------------------------------------------------------------- */
+@import "../css/_mixins.scss";
+@import "../css/_theme-vars.scss";
+@import "../css/_theme-responsive.scss";
+@import "../theme-specific/blog-styles/_excerpt-responsive.scss";
+@import "../theme-specific/blog-styles/_classic-responsive.scss";
+@import "../theme-specific/blog-styles/_masonry-responsive.scss";
+@import "../theme-specific/blog-styles/_portfolio-responsive.scss";
+@import "../theme-specific/blog-styles/_gallery-responsive.scss";
+@import "../front-page/_front-page-responsive.scss";
+@import "../theme-specific/theme-hovers/_theme-hovers-responsive.scss";
+@import "../plugins/trx_addons/_trx_addons-responsive.scss";
+@import "../plugins/gutenberg/_gutenberg-responsive.scss";
+
+
+/* SASS Suffix: --xxl */
+@media (max-width: 1679px) {
+	@include theme--xxl();
+	@include gutenberg--xxl();
+}
+
+
+/* SASS Suffix: --xl */
+@media (max-width: 1439px) {
+	@include theme--xl();
+	@include blog_styles_classic--xl();
+	@include blog_styles_masonry--xl();
+	@include blog_styles_portfolio--xl();
+	@include front_page--xl();
+	@include trx_addons--xl();
+	@include gutenberg--xl();
+}
+
+
+/* SASS Suffix: --lg */
+@media (max-width: 1279px) {
+	@include theme--lg();
+	@include blog_styles_excerpt--lg();
+	@include blog_styles_classic--lg();
+	@include blog_styles_gallery--lg();
+	@include front_page--lg();
+	@include trx_addons--lg();
+	@include gutenberg--lg();
+}
+
+
+/* SASS Suffix: --md */
+@media (max-width: 1023px) {
+	@include theme--md();
+	@include blog_styles_excerpt--md();
+	@include blog_styles_classic--md();
+	@include blog_styles_masonry--md();
+	@include blog_styles_portfolio--md();
+	@include blog_styles_gallery--md();
+	@include front_page--md();
+	@include trx_addons--md();
+	@include gutenberg--md();
+}
+
+
+/* SASS Suffix: --sm */
+@media (max-width: 767px) {
+	@include theme--sm();
+	@include blog_styles_excerpt--sm();
+	@include blog_styles_masonry--sm();
+	@include blog_styles_portfolio--sm();
+	@include blog_styles_gallery--sm();
+	@include front_page--sm();
+	@include trx_addons--sm();
+	@include gutenberg--sm();
+}
+
+
+/* SASS Suffix: --xs */
+@media (max-width: 479px) {
+	@include theme--xs();
+	@include blog_styles_gallery--xs();
+	@include front_page--xs();
+	@include theme-hovers--xs();
+	@include trx_addons--xs();
+	@include gutenberg--xs();
+}

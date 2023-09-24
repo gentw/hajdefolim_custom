@@ -1,0 +1,143 @@
+/* Blog layout: Excerpt 
+------------------------- */
+.post_layout_excerpt {
+	position:relative;
+	margin-bottom:0;
+}
+.post_layout_excerpt + .post_layout_excerpt {
+	margin-top: 5rem;
+}
+.post_layout_excerpt:not(.sticky) + .post_layout_excerpt:not(.sticky) {
+	padding-top: 0;
+}
+.post_layout_excerpt.sticky {
+	padding: 3em;
+}
+.post_layout_excerpt .post_featured {
+	display: inline-block;
+}
+.post_layout_excerpt.post_format_audio .post_featured.without_thumb,
+.post_layout_excerpt.post_format_gallery .post_featured.without_thumb {
+	display:block;
+}
+.post_layout_excerpt .post_header {
+	margin: 0;
+	position:relative;
+}
+.post_layout_excerpt .post_header .post_price {
+	width: auto;
+	@include abs-rt;
+	@include font(2.5em, 1.5em);
+}
+.post_layout_excerpt .post_title {
+	margin: 0;
+	font-weight: 700;
+	font-size: 42px;
+	letter-spacing: 0;
+}
+.post_layout_excerpt .post_meta {
+	margin-top: 1.65rem;
+}
+.post_layout_excerpt .post_featured {
+	margin-bottom: 0;
+}
+.post_layout_excerpt .post_header + .post_featured {
+	margin-top:2.3rem;
+}
+.post_layout_excerpt .post_featured + .post_content,
+.post_layout_excerpt .post_header + .post_content {
+	margin-top:2.75rem;
+}
+.post_layout_excerpt .post_content {
+	position: relative;
+}
+.post_layout_excerpt .post_content:after {
+	position: relative;
+	content: '\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c\e83c';
+	font-family: $theme_icons;
+	color: #928a97;
+	font-size: 12px;
+	letter-spacing: 7.35px;
+	padding-left: 2px;
+	font-weight: 300;
+	display: inline-block;
+	height: 10px;
+	line-height: 10px;
+	vertical-align: middle;
+	overflow: hidden;
+	width: 47%;
+	margin-top: 2.6rem;
+}
+.post_layout_excerpt.sticky .post_content:after {
+	display: none;
+}
+
+
+// First post large in the Classic and Masonry
+body[class*="blog_style_classic"] .post_layout_excerpt,
+body[class*="blog_style_masonry"] .post_layout_excerpt {
+	margin-bottom: 3em;
+}
+
+
+.post_layout_excerpt .post_title a {
+	@include transition-all(0.3s);
+}
+.post_layout_excerpt .post_title a:hover {
+	opacity: 0.9;
+}
+
+
+
+
+body.body_style_boxed:not(.expand_content):not(.sidebar_show) .post_layout_excerpt .post_featured,
+body.body_style_wide:not(.expand_content):not(.sidebar_show) .post_layout_excerpt .post_featured {
+	display: block;
+	text-align: center;
+	margin-left: -100px;
+	margin-right: -100px;
+}
+body:not(.sidebar_show):not(.expand_content) .post_layout_excerpt.post_format_quote blockquote {
+	margin: 0 -100px;
+}
+body:not(.expand_content):not(.sidebar_show) .blog_widgets_wrap {
+	margin: 0 -100px;
+}
+
+
+
+.post_layout_excerpt .wp-block-gallery .blocks-gallery-image, .post_layout_excerpt .wp-block-gallery .blocks-gallery-item {
+	width: calc(100% / 2 - 20px);
+}
+.post_layout_excerpt .wp-block-gallery .blocks-gallery-image, .post_layout_excerpt .wp-block-gallery .blocks-gallery-item {
+	margin: 10px;
+}
+.post_layout_excerpt .wp-block-gallery {
+	margin: -10px;
+}
+
+
+
+
+
+
+.post_layout_excerpt.post_format_quote .post_content:after {
+	display: none;
+}
+
+
+.posts_container .post_layout_excerpt:last-child .post_content:after {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+

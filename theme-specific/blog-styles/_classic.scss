@@ -1,0 +1,147 @@
+/* Blog layout: Classic 
+------------------------- */
+.posts_container.columns_wrap {
+	display:flex;
+	flex-wrap:wrap;
+}
+.posts_container.columns_wrap .post_layout_classic {
+	display:inline-block;
+	vertical-align:top;
+	@include box(100%, 100%);
+	@include border-box;
+}
+
+.post_layout_classic {
+	position:relative;
+}
+.post_layout_classic .post_featured {
+	margin: 0;
+}
+.post_layout_classic .post_featured img {
+	width: 100%;
+}
+.post_layout_classic .post_header {
+	padding: 1.9em 1.5em 2.1em;
+}
+.post_layout_classic .post_title {
+	font-size: 1.529em;
+	line-height: 1.1em;
+	margin: 13px 0 0 0;
+	font-weight: 600;
+}
+.post_layout_classic .post_title a {
+	@include transition-all(0.3s);
+}
+.post_layout_classic .post_title a:hover {
+	opacity: 0.9;
+}
+.post_layout_classic .post_meta {
+	margin: 0;
+}
+.post_layout_classic .post_title+.post_meta {
+	margin-top:0.5em;
+}
+.post_layout_classic blockquote {
+	margin:0 0 1.4em;
+}
+.post_layout_classic .post_header + .post_content {
+	padding-top: 1em;
+}
+.post_layout_classic.format-aside .post_content_inner + .post_meta,
+.post_layout_classic.format-link .post_content_inner + .post_meta,
+.post_layout_classic.format-status .post_content_inner + .post_meta {
+	margin-top:1em;
+}
+
+
+/* Video */
+.post_layout_classic.post_format_video.has-post-thumbnail .post_featured.with_thumb + .post_header {
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	background-color: transparent !important;
+	@include box-sizing(border-box);
+}
+.post_layout_classic.post_format_video.has-post-thumbnail .post_featured.with_thumb + .post_header .post_title a {
+	color: #ffffff !important;
+}
+.post_layout_classic.post_format_video.has-post-thumbnail .post_featured.with_thumb + .post_header .post_meta_item a,
+.post_layout_classic.post_format_video.has-post-thumbnail .post_featured.with_thumb + .post_header .post_meta_item {
+	color: #ffffff !important;
+}
+.post_layout_classic.post_format_video.has-post-thumbnail .post_featured.with_thumb + .post_header .post_meta_item a {
+	opacity: 1;
+	@include transition-all(0.3s);
+}
+.post_layout_classic.post_format_video.has-post-thumbnail .post_featured.with_thumb + .post_header .post_meta_item a:hover {
+	opacity: 0.9;
+}
+.post_layout_classic.post_format_video.has-post-thumbnail .post_featured.with_thumb:after {
+	content: ' ';
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.3) 90%);
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.3) 90%);
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.3) 90%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', endColorstr='#a6000000',GradientType=0 );
+}
+
+
+
+
+/* Blockquote */
+.post_layout_classic.post_format_quote blockquote p {
+	font-size: 20px;
+	line-height: 1.35em;
+}
+.post_layout_classic.post_format_quote blockquote {
+	text-align: center;
+	padding: 8.5em 2.8em 4.63em;
+}
+.post_layout_classic.post_format_quote blockquote cite,
+.post_layout_classic.post_format_quote blockquote footer,
+.post_layout_classic.post_format_quote blockquote> cite,
+.post_layout_classic.post_format_quote blockquote> p > cite {
+	text-align: center;
+}
+.post_layout_classic.post_format_quote blockquote cite,
+.post_layout_classic.post_format_quote blockquote > cite,
+.post_layout_classic.post_format_quote blockquote > p > cite {
+	margin-top: 1.95em;
+}
+.post_layout_classic.post_format_quote blockquote:before {
+	text-align: center;
+	width: 100%;
+	top: 3.9em;
+	left: 0;
+}
+
+
+
+/* Audio */
+.post_layout_classic.format-audio .post_featured.with_thumb .mask {
+	background-color: rgba(255, 255, 255, 0.12);
+	opacity: 0;
+}
+.post_layout_classic.format-audio .post_featured.with_thumb:hover .mask {
+	opacity: 1;
+}
+
+
+
+
+
+
+.post_layout_classic.post_format_video {
+	overflow: hidden;
+}

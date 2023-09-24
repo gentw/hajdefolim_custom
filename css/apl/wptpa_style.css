@@ -1,0 +1,1392 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
+
+.wptpa_wrapper {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-width: 600px;
+  width: 100%;
+  height: auto;
+}
+
+.wptpa_wrapper *{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.wptpa_wrapper svg{
+  position: initial;
+  left: initial;
+}
+
+.wptpa_wrapper .wptpa_player {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-flex-pack: start;
+  -ms-flex-align: start;
+  box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0.25), 0px 0 0px 0 rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  -o-transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  -webkit-box-orient: horizontal;
+  -webkit-flex-wrap: nowrap;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  -o-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.wptpa_wrapper .wptpa_player.social{
+  box-shadow: 17px 0px 50px 0 rgba(0, 0, 0, 0.25), 5px 0 15px 0 rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  -o-transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transform: translateX(-60px);
+  -ms-transform: translateX(-60px);
+  -o-transform: translateX(-60px);
+  transform: translateX(-60px);
+}
+
+.wptpa_wrapper .wptpa_cover_viewer {
+  position: relative;
+  overflow: hidden;
+  min-width: 220px;
+  height: 200px;
+
+  -webkit-box-flex: 0 0 220px;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 0 0 220px;         /* OLD - Firefox 19- */
+  -webkit-flex: 0 0 220px;
+  -ms-flex: 0 0 220px;
+  flex: 0 0 220px;
+}
+
+.wptpa_wrapper .wptpa_cover_viewer:before {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  z-index: 1;
+  width: 10px;
+  height: 100%;
+  content: '';
+}
+
+.wptpa_wrapper.wptpa_compact .wptpa_cover_viewer:before {
+  display: none;
+}
+
+.wptpa_wrapper .wptpa_cover_viewer .wptpa_elastic_side {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.wptpa_wrapper .wptpa_cover_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 200px;
+  list-style-type: none;
+}
+
+.shake_cover {
+  -webkit-animation: shake 600ms linear forwards;
+  -moz-animation: shake 600ms linear forwards;
+  -o-animation: shake 600ms linear forwards;
+  animation: shake 600ms linear forwards;
+}
+
+.wptpa_wrapper .wptpa_cover {
+  float: left;
+  overflow: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 200px;
+  border: 0 !important;
+  list-style-type: none;
+}
+.wptpa_wrapper .wptpa_cover:before,
+.wptpa_wrapper .wptpa_cover:after {
+  content: none !important;
+}
+.wptpa_wrapper .wptpa_cover img{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  display: block;
+  min-width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+}
+
+.wptpa_wrapper .wptpa_controls {
+  position: relative;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-flex-pack: start;
+  -ms-flex-align: start;
+  min-width: 0px;
+  min-height: 200px;
+  width: 100%;
+
+  -webkit-box-orient: vertical;
+  -webkit-flex-wrap: wrap;
+  -webkit-flex-flow: column wrap;
+  -moz-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  -o-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  justify-content: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;         /* OLD - Firefox 19- */
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  -o-flex: 1;
+  flex: 1;
+}
+
+
+.wptpa_wrapper .wptpa_heading {
+  position: relative;
+  padding: 30px 20px 25px 0px;
+  width: 100%;
+  height: 90px;
+  text-align: center;
+  font-weight: 100;
+  font-size: 26px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 26px;
+  cursor: default;
+}
+
+.wptpa_wrapper .wptpa_heading span{
+  padding-bottom: 5px;
+  white-space: nowrap;
+}
+.wptpa_marquee {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.wptpa_marquee.on {
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+
+.wptpa_marquee.on div {
+  display: inline-block;
+  padding-left: 100%;
+  -webkit-animation: wptpa_marquee 10s infinite linear;
+  -moz-animation: wptpa_marquee 10s infinite linear;
+  animation: wptpa_marquee 10s infinite linear;
+}
+
+.wptpa_wrapper .wptpa_heading span.handletitle_out{
+  -webkit-animation: handletitle_out 300ms both cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -o-animation: handletitle_out 300ms both cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  animation: handletitle_out 300ms both cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.wptpa_wrapper .wptpa_heading span.handletitle_in{
+  -webkit-animation: handletitle_in 300ms both cubic-bezier(0.215, 0.61, 0.355, 1);
+  -o-animation: handletitle_in 300ms both cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation: handletitle_in 300ms both cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.wptpa_wrapper .wptpa_heading b{
+  font-weight: 400;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.wptpa_wrapper .wptpa_heading .wptpa_open_nw {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.wptpa_wrapper .wptpa_heading .wptpa_open_nw path{
+  cursor: pointer;
+}
+
+.wptpa_wrapper .wptpa_main_controls {
+  position: relative;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-flex-pack: start;
+  -ms-flex-align: start;
+  padding: 0 20px 0 0px;
+  width: 100%;
+  height: 20px;
+
+  -webkit-box-orient: horizontal;
+  -webkit-flex-wrap: nowrap;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  -o-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+
+.wptpa_wrapper .wptpa_controls svg * {
+  cursor: pointer;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+/* Button */
+
+.wptpa_wrapper .wptpa_main_controls .wptpa_playback,
+.wptpa_wrapper .wptpa_main_controls .wptpa_prev,
+.wptpa_wrapper .wptpa_main_controls .wptpa_repeat,
+.wptpa_wrapper .wptpa_main_controls .wptpa_next,
+.wptpa_wrapper .wptpa_main_controls .wptpa_shuffle,
+.wptpa_wrapper .wptpa_main_controls .wptpa_share,
+.wptpa_wrapper .wptpa_additional_controls .wptpa_one_item_optional,
+.wptpa_wrapper .wptpa_additional_controls .wptpa_playlist_toggle,
+.wptpa_wrapper .wptpa_additional_controls .wptpa_mute {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 20px;
+  -ms-flex: 0 0 20px;
+  flex: 0 0 20px;
+}
+
+.wptpa_wrapper .wptpa_main_controls .wptpa_playback,
+.wptpa_wrapper .wptpa_additional_controls .wptpa_mute{
+  margin-right: 20px;
+}
+
+.wptpa_wrapper .wptpa_main_controls .wptpa_prev,
+.wptpa_wrapper .wptpa_main_controls .wptpa_repeat,
+.wptpa_wrapper .wptpa_main_controls .wptpa_next,
+.wptpa_wrapper .wptpa_main_controls .wptpa_shuffle,
+.wptpa_wrapper .wptpa_main_controls .wptpa_share {
+  margin-left: 20px;
+}
+
+.wptpa_wrapper .wptpa_main_controls .wptpa_share{
+  z-index: 3;
+}
+
+.wptpa_wrapper .wptpa_heading .wptpa_open_nw,
+.wptpa_wrapper .wptpa_main_controls .wptpa_playback,
+.wptpa_wrapper .wptpa_main_controls .wptpa_prev,
+.wptpa_wrapper .wptpa_main_controls .wptpa_repeat,
+.wptpa_wrapper .wptpa_main_controls .wptpa_next,
+.wptpa_wrapper .wptpa_main_controls .wptpa_shuffle,
+.wptpa_wrapper .wptpa_main_controls .wptpa_share,
+.wptpa_wrapper .wptpa_console .wptpa_close_console,
+.wptpa_wrapper .wptpa_additional_controls .wptpa_one_item_optional,
+.wptpa_wrapper .wptpa_additional_controls .wptpa_playlist_toggle,
+.wptpa_wrapper .wptpa_additional_controls .wptpa_mute,
+.wptpa_wrapper .wptpa_additional_controls .wptpa_one_item_optional{
+  stroke-width: 0;
+}
+
+.wptpa_wrapper .wptpa_seek {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 20px;
+  cursor: pointer;
+  -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;         /* OLD - Firefox 19- */
+  -webkit-flex: 1 1 100%;
+  -moz-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  -o-flex: 1 1 100%;
+  flex: 1 1 100%;
+}
+
+.wptpa_wrapper.wptpa_loading .wptpa_seek:before{
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  z-index: 10;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  content: '';
+  -webkit-animation: wptpa_loading 1000ms infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -o-animation: wptpa_loading 1000ms infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  animation: wptpa_loading 1000ms infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.wptpa_wrapper.wptpa_loading .wptpa_seek:after{
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  z-index: 10;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  content: '';
+  -webkit-animation: wptpa_loading 1000ms infinite 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -o-animation: wptpa_loading 1000ms infinite 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  animation: wptpa_loading 1000ms infinite 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.wptpa_wrapper .wptpa_seek *{
+  cursor: pointer;
+}
+
+.wptpa_wrapper .wptpa_progress {
+  position: relative;
+  width: 0;
+  height: 100%;
+}
+
+.wptpa_wrapper .wptpa_progress .wptpa_handle{
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 10px;
+  height: 100%;
+}
+
+.wptpa_wrapper .wptpa_current,
+.wptpa_wrapper .wptpa_duration{
+  position: absolute;
+  top: 10px;
+  display: none;
+  font-weight: 400;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 0px;
+}
+.wptpa_wrapper .wptpa_current {
+  left: 5px;
+}
+.wptpa_wrapper .wptpa_duration {
+  right: 5px;
+}
+.wptpa_wrapper .wptpa_additional_controls {
+  position: relative;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-flex-pack: justify;
+  -ms-flex-align: end;
+  padding: 20px 20px 20px 0;
+  width: 100%;
+  height: 90px;
+
+  -webkit-box-orient: horizontal;
+  -webkit-flex-wrap: nowrap;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  -o-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+
+.wptpa_wrapper .wptpa_additional_controls .wptpa_one_item_optional{
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.wptpa_wrapper .wptpa_soundbar {
+  position: relative;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-flex-pack: start;
+  -ms-flex-align: center;
+  width: 140px;
+  height: 20px;
+
+  -webkit-box-orient: horizontal;
+  -webkit-flex-wrap: nowrap;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  -o-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.wptpa_wrapper .wptpa_volume_range {
+  position: relative;
+  width: 100px;
+  height: 20px;
+  background: none !important;
+  cursor: pointer;
+}
+
+.wptpa_wrapper .wptpa_volume_range:before {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  content: '';
+}
+
+.wptpa_wrapper .wptpa_volume {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 0;
+  height: 4px;
+}
+
+.wptpa_wrapper .wptpa_volume_value {
+  position: absolute;
+  top: -35px;
+  right: 0;
+  display: none;
+  padding: 5px 0;
+  width: 40px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 17px;
+}
+
+.wptpa_wrapper .wptpa_volume_value:before {
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+  width: 0;
+  height: 0;
+  border-width: 8px 0 0 10px;
+  border-style: solid;
+  content: '';
+}
+
+.wptpa_wrapper .wptpa_social_share{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  padding: 20px;
+  width: 60px;
+  height: 100%;
+}
+
+.wptpa_wrapper .wptpa_social_share a{
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  width: 20px;
+  height: 20px;
+}
+
+.wptpa_wrapper.wptpa_compact .wptpa_social_share a{
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.wptpa_wrapper .wptpa_playlist {
+  position: relative;
+  overflow: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  list-style-type: none;
+
+  -webkit-box-orient: vertical;
+  -webkit-flex-wrap: nowrap;
+  -webkit-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  -o-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: left;
+}
+
+.wptpa_wrapper .wptpa_playlist_item {
+  position: relative;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-flex-pack: start;
+  -ms-flex-align: start;
+  margin: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
+
+  -webkit-box-orient: horizontal;
+  -webkit-flex-wrap: nowrap;
+  -webkit-flex-flow:  row nowrap;
+  -ms-flex-flow:  row nowrap;
+  flex-flow:  row nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+.wptpa_playlist_item:before,
+.wptpa_playlist_item :after{
+  content: none !important;
+}
+.wptpa_wrapper .wptpa_playlist_item .wptpa_marker {
+  -webkit-flex: 0 0 40px;
+  -moz-flex: 0 1 40px;
+  -ms-flex: 0 0 40px;
+  -o-flex: 0 0 40px;
+  flex: 0 0 40px;
+  stroke-width: 6px;
+}
+
+.wptpa_wrapper .wptpa_item_name {
+  overflow: hidden;
+  padding: 10px 20px 10px 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 20px;
+  cursor: pointer;
+
+  -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;         /* OLD - Firefox 19- */
+  -webkit-flex: 0 1 100%;
+  -moz-flex: 0 1 100%;
+  -ms-flex: 0 1 100%;
+  -o-flex: 0 1 100%;
+  flex: 0 1 100%;
+}
+
+.wptpa_wrapper .wptpa_playlist.visible .wptpa_item_name{
+  -webkit-animation-name: item_name_show;
+  -o-animation-name: item_name_show;
+  animation-name: item_name_show;
+  -webkit-animation-duration: 300ms;
+  -o-animation-duration: 300ms;
+  animation-duration: 300ms;
+  -webkit-animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  -o-animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+
+  -webkit-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.wptpa_wrapper .wptpa_buy,
+.wptpa_wrapper .wptpa_download,
+.wptpa_wrapper .wptpa_optional_gap {
+  height: 40px;
+  outline: none !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+
+  -webkit-flex: 0 0 40px;
+  -moz-flex: 0 1 40px;
+  -ms-flex: 0 0 40px;
+  -o-flex: 0 0 40px;
+  flex: 0 0 40px;;;;;
+}
+
+.wptpa_wrapper .wptpa_stat_icon_sng,
+.wptpa_wrapper .wptpa_buy svg,
+.wptpa_wrapper .wptpa_download svg {
+  opacity:0.5;
+  filter:alpha(opacity=50);
+}
+
+.wptpa_wrapper .wptpa_buy:hover svg,
+.wptpa_wrapper .wptpa_download:hover svg{
+  opacity:1;
+  filter:alpha(opacity=100);
+}
+
+.wptpa_wrapper .wptpa_modal{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999999999;
+  display: none;
+  margin: auto;
+}
+
+.wptpa_wrapper .wptpa_overlay{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: #fff;
+  cursor: pointer;
+}
+
+.wptpa_wrapper .wptpa_overlay:before{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 4px;
+  height: 20px;
+  background: #555;
+  content: '';
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+.wptpa_wrapper .wptpa_overlay:after{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 4px;
+  height: 20px;
+  background: #555;
+  content: '';
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+.wptpa_wrapper .wptpa_overlay:hover:before,
+.wptpa_wrapper .wptpa_overlay:hover:after{
+  background: #3EC3D5;
+}
+
+.wptpa_wrapper .wptpa_info_wrapper{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  margin: auto;
+  padding: 25px;
+  width: 500px;
+  height: 300px;
+  background: #f2f2f2;
+  word-wrap: break-word;
+}
+@media screen and (max-width: 600px) {
+  .wptpa_wrapper .wptpa_info_wrapper{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    margin: auto;
+    padding: 25px;
+    width: 200px;
+    height: 500px;
+    background: #f8f8f8;
+    word-wrap: break-word;
+  }
+}
+.wptpa_wrapper .wptpa_info_heading{
+  margin-bottom: 20px;
+  color: #3EC3D5;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 30px;
+}
+
+.wptpa_wrapper .wptpa_info_container{
+  color: #555;
+  text-align: left;
+  font-weight: 300;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 26px;
+}
+
+/* Анимации */
+
+/* Бегущая строка*/
+@-webkit-keyframes wptpa_marquee {
+    0% {
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    100% {
+        -webkit-transform: translate(-100%, 0);
+        -moz-transform: translate(-100%, 0);
+        transform: translate(-100%, 0);
+    }
+}
+
+@-moz-keyframes wptpa_marquee {
+    0% {
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    100% {
+        -webkit-transform: translate(-100%, 0);
+        -moz-transform: translate(-100%, 0);
+        transform: translate(-100%, 0);
+    }
+}
+
+@keyframes wptpa_marquee {
+    0% {
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    100% {
+        -webkit-transform: translate(-100%, 0);
+        -moz-transform: translate(-100%, 0);
+        transform: translate(-100%, 0);
+    }
+}
+/* Анимация титра выход */
+@-webkit-keyframes handletitle_out {
+  from {
+    opacity:1;
+    filter:alpha(opacity=100);
+    -webkit-transform: translateY(0%);
+  }
+  to {
+    opacity:0;
+    filter:alpha(opacity=0);
+    -webkit-transform: translateY(-50%);
+  }
+}
+@-o-keyframes handletitle_out {
+  from {
+    opacity:1;
+    filter:alpha(opacity=100);
+    -o-transform: translateY(0%);
+  }
+  to {
+    opacity:0;
+    filter:alpha(opacity=0);
+    -o-transform: translateY(-50%);
+  }
+}
+@-moz-keyframes handletitle_out {
+  from {
+    opacity:1;
+    filter:alpha(opacity=100);
+    -moz-transform: translateY(0%);
+  }
+  to {
+    opacity:0;
+    filter:alpha(opacity=0);
+    -moz-transform: translateY(-50%);
+  }
+}
+@keyframes handletitle_out {
+  from {
+    opacity:1;
+    filter:alpha(opacity=100);
+    transform: translateY(0%);
+  }
+  to {
+    opacity:0;
+    filter:alpha(opacity=0);
+    transform: translateY(-50%);
+  }
+}
+
+/* Анимация титра вход */
+@-webkit-keyframes handletitle_in {
+  from {
+    opacity:0;
+    filter:alpha(opacity=0);
+    -webkit-transform: translateY(50%);
+  }
+  to {
+    opacity:1;
+    filter:alpha(opacity=100);
+    -webkit-transform: translateY(0%);
+  }
+}
+@-o-keyframes handletitle_in {
+  from {
+    opacity:0;
+    filter:alpha(opacity=0);
+    -o-transform: translateY(50%);
+  }
+  to {
+    opacity:1;
+    filter:alpha(opacity=100);
+    -o-transform: translateY(0%);
+  }
+}
+@-moz-keyframes handletitle_in {
+  from {
+    opacity:0;
+    filter:alpha(opacity=0);
+    -moz-transform: translateY(50%);
+  }
+  to {
+    opacity:1;
+    filter:alpha(opacity=100);
+    -moz-transform: translateY(0%);
+  }
+}
+@keyframes handletitle_in {
+  from {
+    opacity:0;
+    filter:alpha(opacity=0);
+    transform: translateY(50%);
+  }
+  to {
+    opacity:1;
+    filter:alpha(opacity=100);
+    transform: translateY(0%);
+  }
+}
+
+/* Анимация элементов плейлиста вход */
+@-webkit-keyframes item_name_show {
+  from {
+    opacity:0;
+    filter:alpha(opacity=0);
+    -webkit-transform: translateY(50%);
+  }
+  to {
+    opacity:1;
+    filter:alpha(opacity=100);
+    -webkit-transform: translateY(0%);
+  }
+}
+@-o-keyframes item_name_show {
+  from {
+    opacity:0;
+    filter:alpha(opacity=0);
+    -o-transform: translateY(50%);
+  }
+  to {
+    opacity:1;
+    filter:alpha(opacity=100);
+    -o-transform: translateY(0%);
+  }
+}
+@-moz-keyframes item_name_show {
+  from {
+    opacity:0;
+    filter:alpha(opacity=0);
+    -moz-transform: translateY(50%);
+  }
+  to {
+    opacity:1;
+    filter:alpha(opacity=100);
+    -moz-transform: translateY(0%);
+  }
+}
+@keyframes item_name_show {
+  from {
+    opacity:0;
+    filter:alpha(opacity=0);
+    transform: translateY(50%);
+  }
+  to {
+    opacity:1;
+    filter:alpha(opacity=100);
+    transform: translateY(0%);
+  }
+}
+
+
+/* Анимация конца плейлиста */
+@-webkit-keyframes shake {
+  20% { -webkit-transform: translateX(10px); }
+  40% { -webkit-transform: translateX(-10px); }
+  50% { -webkit-transform: translateX(5px); }
+  60% { -webkit-transform: translateX(-5px); }
+  70% { -webkit-transform: translateX(2px); }
+  80% { -webkit-transform: translateX(-2px); }
+}
+@-o-keyframes shake {
+  20% { -o-transform: translateX(10px); }
+  40% { -o-transform: translateX(-10px); }
+  50% { -o-transform: translateX(5px); }
+  60% { -o-transform: translateX(-5px); }
+  70% { -o-transform: translateX(2px); }
+  80% { -o-transform: translateX(-2px); }
+}
+@-moz-keyframes shake {
+  20% { -moz-transform: translateX(10px); }
+  40% { -moz-transform: translateX(-10px); }
+  50% { -moz-transform: translateX(5px); }
+  60% { -moz-transform: translateX(-5px); }
+  70% { -moz-transform: translateX(2px); }
+  80% { -moz-transform: translateX(-2px); }
+}
+@keyframes shake {
+  20% { transform: translateX(10px); }
+  40% { transform: translateX(-10px); }
+  50% { transform: translateX(5px); }
+  60% { transform: translateX(-5px); }
+  70% { transform: translateX(2px); }
+  80% { transform: translateX(-2px); }
+}
+
+/* Анимация загрузки */
+
+@-webkit-keyframes wptpa_loading {
+  from { left: -10px; }
+  to { left: 105%; }
+}
+@-o-keyframes wptpa_loading {
+  from { left: -10px; }
+  to { left: 105%; }
+}
+@-moz-keyframes wptpa_loading {
+  from { left: -10px; }
+  to { left: 105%; }
+}
+@keyframes wptpa_loading {
+  from { left: -10px; }
+  to { left: 105%; }
+}
+
+/* CompactMode */
+#mep_0 {display:none;}
+.wptpa_wrapper.wptpa_compact {
+  position: relative;
+  margin: 0;
+  min-width: 100%;
+  max-width: 350px;
+  height: auto;
+  display: inline-block;
+}
+
+.wptpa_wrapper.wptpa_compact .wptpa_player {
+  -webkit-box-orient: vertical;
+  -webkit-flex-wrap: wrap;
+  -webkit-flex-flow: column wrap;
+  -moz-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  -o-flex-flow: column wrap;
+  flex-flow: column wrap;
+}
+
+.wptpa_wrapper.wptpa_compact .wptpa_cover_viewer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: #3EC3D5;
+
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.wptpa_wrapper.wptpa_compact .wptpa_cover_viewer .wptpa_elastic_side{
+  display: none;
+}
+
+.wptpa_wrapper.wptpa_compact .wptpa_heading {
+  padding: 25px 20px;
+  height: 80px;
+}
+
+.wptpa_wrapper.wptpa_compact .wptpa_main_controls {
+  -ms-flex-pack: center;
+  padding: 0 20px 0 20px;
+  height: 60px;
+
+  -webkit-box-orient: horizontal;
+  -webkit-flex-wrap: wrap;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  -o-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center
+}
+
+.wptpa_wrapper.wptpa_compact .wptpa_main_controls .wptpa_playback,
+.wptpa_wrapper.wptpa_compact .wptpa_main_controls .wptpa_prev,
+.wptpa_wrapper.wptpa_compact .wptpa_main_controls .wptpa_repeat,
+.wptpa_wrapper.wptpa_compact .wptpa_main_controls .wptpa_next,
+.wptpa_wrapper.wptpa_compact .wptpa_main_controls .wptpa_shuffle,
+.wptpa_wrapper.wptpa_compact .wptpa_main_controls .wptpa_share {
+  -ms-flex-order: 1;
+
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 1;
+  order: 1;
+}
+
+.wptpa_wrapper.wptpa_compact .wptpa_seek {
+  -ms-flex-order: 2;
+  margin-top: 20px;
+
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 2;
+  order: 2;
+}
+
+.wptpa_wrapper.wptpa_compact .wptpa_additional_controls {
+  padding: 20px 20px 20px 20px;
+  height: 60px;
+}
+
+.wptpa_wrapper.wptpa_compact .wptpa_main_controls .wptpa_playback{
+  margin-right: 0;
+}
+
+
+.wptpa_wrapper.wptpa_compact .wptpa_additional_controls .wptpa_one_item_optional{
+  left: 0px;
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+.ui-slider-handle{
+	display: none !important;
+	width: 0 !important;
+	height: 0 !important;
+}
+
+.ui-slider{
+	border: 0 !important;
+	border-radius: 0 !important;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+    border: none !important;
+    background: none !important;
+}
+
+.wptpa_playlist_wrapper{
+	overflow: hidden;
+}
+.wptpa_playlist_wrapper_grand{
+	position: relative;
+}
+
+.wptpa_playlist_scroll{
+	position: absolute;
+	width: 20px;
+	height: 100%;
+	z-index: 10;
+	top: 0;
+	right: -20px;
+	cursor: pointer;
+}
+
+.wptpa_playlist_scroll_handle{
+	position: absolute;
+	width: 5px;
+	height: 20px;
+	opacity: 0.25;
+	left: 7px;
+	border-radius: 5px;
+	margin-top: 0px;
+	-webkit-transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+	-o-transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+	transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.wptpa_playlist_wrapper:active .wptpa_playlist_scroll_handle,
+.wptpa_playlist_wrapper:hover .wptpa_playlist_scroll_handle{
+	opacity: 1;
+	height: 40px;
+}
+
+
+
+/* LOADER */
+#wptpa_cover_loader{
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  left: calc(25% - 10px);
+  width: 50%;
+  height: 50%;
+  z-index: 10;
+}
+.wptpa_circular{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: wptpa_circular 2s infinite linear;
+  animation: wptpa_circular 2s infinite linear;
+}
+.wptpa_circular_path{
+  stroke-width: 4px;
+  stroke-dasharray: 126;
+  -webkit-animation: wptpa_circular_path 2s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  animation: wptpa_circular_path 2s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+@-webkit-keyframes wptpa_circular_path {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: -126;
+  }
+  100% {
+    stroke-dashoffset: -252;
+  }
+}
+
+@keyframes wptpa_circular_path {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: -126;
+  }
+  100% {
+    stroke-dashoffset: -252;
+  }
+}
+
+@-webkit-keyframes wptpa_circular {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes wptpa_circular {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+
+.wptpa_stat_icon_sng{
+  width: 1px;
+  min-width: 1px;
+}
+.wptpa_sng_data{
+  position: relative;
+  padding: 0px;
+  min-width: 40px;
+  max-width: 40px;
+  font-weight: 400;
+  font-size: 11px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 40px;
+  text-align: center;
+  cursor: help;
+}
+.wptpa_sng_data {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.wptpa_sng_data:before{
+  position: absolute;
+  width: auto;
+  height: 40px;
+  content: attr(data-tooltip);
+  z-index: 99999999;
+  padding: 10px 20px;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 20px;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: 20px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: all 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  visibility: hidden;
+  box-shadow: -10px 0 20px rgba(0,0,0,0.19), -6px 0 6px rgba(0,0,0,0.23);
+}
+
+.wptpa_sng_data:after{
+  position: absolute;
+  content: '' !important;
+  width: 0;
+  height: 0;
+  top: 15px;
+  left: -1px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left:5px solid;
+  margin-left: 20px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  visibility: hidden;
+}
+
+.wptpa_sng_data:hover{
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.wptpa_sng_data:hover:before,
+.wptpa_sng_data:hover:after{
+  margin-left: 0;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  visibility: visible;
+}
